@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Fairly Reliable Car Sales | Catalogue</title>
+    <link rel="icon" type="image/x-icon" href=".assets/FRLogo.jpg" />
+    <style>
+        body {
+            font-family: Arial;
+            background-image: url('assets/CarDealership.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            display: solid;
+        }
+        header {
+            background-color: darkgoldenrod;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 128px;
+            z-index: 999;
+        }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                text-align: center;
+            }
+
+                nav ul li {
+                    display: inline;
+                }
+
+                    nav ul li a {
+                        display: inline-block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 20px;
+                        text-decoration: none;
+                    }
+
+                        nav ul li a:hover {
+                            background-color: #ddd;
+                            color: black;
+                        }
+
+        .search-bar {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+            .search-bar select, .search-bar input {
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+
+            .search-bar button {
+                padding: 10px 20px;
+                background-color: #333;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+                .search-bar button:hover {
+                    background-color: #555;
+                }
+
+        .car-card {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+            padding: 15px;
+        }
+
+            .car-card:hover {
+                transform: scale(1.05);
+            }
+
+        .car-image {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .car-info {
+            color: #333;
+            flex-grow: 1;
+        }
+
+            .car-info h2 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+
+            .car-info p {
+                margin: 5px 0;
+                color: #777;
+            }
+
+            .car-info .price {
+                font-size: 1.2em;
+                color: #e74c3c;
+                font-weight: bold;
+            }
+
+        .book-viewing-btn {
+            background-color: goldenrod;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background-color 0.3s ease;
+        }
+
+            .book-viewing-btn:hover {
+                background-color: darkgoldenrod;
+            }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fairly Reliable Car Sales</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Aboutpage.html">About</a></li>
+            <li><a href="Cataloguepage.html">Catalogue</a></li>
+            <li><a href="Servicespage.html">Services</a></li>
+            <li><a href="Contactpage.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="search-bar">
+            <form id="car-search-form">
+                <select id="make" name="make">
+                    <option value="">Select Make</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Audi">Audi</option>
+                </select>
+                <select id="model" name="model">
+                    <option value="">Select Model</option>
+                </select>
+                <select id="year" name="year">
+                    <option value="">Select Year</option>
+                </select>
+                <input type="number" id="mileage" name="mileage" placeholder="Enter Mileage">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="car-card">
+            <img src="assets/2023Tesla.jpg" alt="2023Tesla" class="car-image">
+            <div class="car-info">
+                <h2>2023 Tesla Model S</h2>
+                <p>Year: 2023</p>
+                <p>Model: Tesla Model S</p>
+                <p>Mileage: 23000km</p>
+                <p class="price">£94,990</p>
+            </div>
+            <a href="Contactpage.html" class="book-viewing-btn">Book a Viewing</a>
+        </div>
+        <div class="car-card">
+            <img src="assets/2017AudiA3.jpg" alt="2017Audi" class="car-image">
+            <div class="car-info">
+                <h2>2017 Audi A3</h2>
+                <p>Year: 2017</p>
+                <p>Model: A3</p>
+                <p>Mileage: 67000km</p>
+                <p class="price">£4,990</p>
+            </div>
+            <a href="Contactpage.html" class="book-viewing-btn">Book a Viewing</a>
+        </div>
+        <div class="car-card">
+            <img src="assets/2012ToyotaYaris.jpg" alt="2012ToyotaY" class="car-image">
+            <div class="car-info">
+                <h2>2012 Toyota Yaris</h2>
+                <p>Year: 2012</p>
+                <p>Model: Yaris</p>
+                <p>Mileage: 94000km</p>
+                <p class="price">£1,990</p>
+            </div>
+            <a href="Contactpage.html" class="book-viewing-btn">Book a Viewing</a>
+        </div>
+        <div class="car-card">
+            <img src="assets/2015FordFocus.jpg" alt="2015FordF" class="car-image">
+            <div class="car-info">
+                <h2>2015 Ford Focus</h2>
+                <p>Year: 2015</p>
+                <p>Model: Focus</p>
+                <p>Mileage: 57000km</p>
+                <p class="price">£5,990</p>
+            </div>
+            <a href="Contactpage.html" class="book-viewing-btn">Book a Viewing</a>
+        </div>
+        <div class="car-card">
+            <img src="assets/2024FordMustang.jpg" alt="2015FordM" class="car-image">
+            <div class="car-info">
+                <h2>2024 Ford Mustang</h2>
+                <p>Year: 2024</p>
+                <p>Model: Mustang</p>
+                <p>Mileage: 12000km</p>
+                <p class="price">£80,990</p>
+            </div>
+            <a href="Contactpage.html" class="book-viewing-btn">Book a Viewing</a>
+        </div>
+        <div class="car-card">
+            <img src="assets/2014HondaCivic.jpg" alt="2014HondaC" class="car-image">
+            <div class="car-info">
+                <h2>2014 Honda Civic</h2>
+                <p>Year: 2014</p>
+                <p>Model: Civic</p>
+                <p>Mileage: 96000km</p>
+                <p class="price">£3,990</p>
+            </div>
+            <a href="Contactpage.html" class="book-viewing-btn">Book a Viewing</a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Fairly Reliable Car Sales. All rights reserved.</p>
+    </footer>
+    <script>const cars = [
+            { make: "Honda", model: "Yaris", year: 2012, mileage: 94000 },
+            { make: "Ford", model: "Focus", year: 2015, mileage: 57000 },
+            { make: "Tesla", model: "Model 3", year: 2023, mileage: 23000 },
+            { make: "Audi", model: "A3", year: 2017, mileage: 67000 },
+        ];
+
+        const carCardsContainer = document.getElementById('carCards');
+        const makeFilter = document.getElementById('make');
+        const modelFilter = document.getElementById('model');
+        const yearFilter = document.getElementById('year');
+        const mileageFilter = document.getElementById('mileage');
+
+        makeFilter.addEventListener('change', function () {
+            const selectedMake = this.value;
+            populateModels(selectedMake);
+        });
+
+        modelFilter.addEventListener('change', function () {
+            const selectedMake = makeFilter.value;
+            const selectedModel = this.value;
+            populateYears(selectedMake, selectedModel);
+        });
+
+        function populateModels(make) {
+            modelFilter.innerHTML = '<option value="">Select Model</option>';
+            const models = [...new Set(cars.filter(car => car.make === make).map(car => car.model))];
+            models.forEach(model => {
+                const option = document.createElement('option');
+                option.value = model;
+                option.textContent = model;
+                modelFilter.appendChild(option);
+            });
+
+            yearFilter.innerHTML = '<option value="">Select Year</option>';
+            mileageFilter.value = '';
+        }
+
+        function populateYears(make, model) {
+            yearFilter.innerHTML = '<option value="">Select Year</option>';
+            const years = [...new Set(cars.filter(car => car.make === make && car.model === model).map(car => car.year))];
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearFilter.appendChild(option);
+            });
+        }
+
+        document.getElementById('car-search-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            filterCars();
+        });
+
+        function filterCars() {
+            const make = makeFilter.value;
+            const model = modelFilter.value;
+            const year = yearFilter.value;
+            const mileage = mileageFilter.value;
+
+            const filteredCars = cars.filter(car => {
+                const matchesMake = make ? car.make === make : true;
+                const matchesModel = model ? car.model === model : true;
+                const matchesYear = year ? car.year === parseInt(year) : true;
+                const matchesMileage = mileage ? car.mileage <= parseInt(mileage) : true;
+
+                return matchesMake && matchesModel && matchesYear && matchesMileage;
+            });
+
+            displayCars(filteredCars);
+        }
+
+        function displayCars(filteredCars) {
+            carCardsContainer.innerHTML = '';
+
+            if (filteredCars.length === 0) {
+                carCardsContainer.innerHTML = '<p>No cars match the selected filters.</p>';
+                return;
+            }
+
+            filteredCars.forEach(car => {
+                const carCard = document.createElement('div');
+                carCard.classList.add('car-card');
+                carCard.innerHTML = `
+            <h3>${car.make} ${car.model} ${car.year}</h3>
+            <p>Mileage: ${car.mileage} km</p>
+        `;
+                carCardsContainer.appendChild(carCard);
+            });
+            filteredCars.forEach(car => {
+                const carCard = [...allCarCards].find(card => {
+                    return card.getAttribute('data-make') === car.make &&
+                        card.getAttribute('data-model') === car.model &&
+                        parseInt(card.getAttribute('data-year')) === car.year &&
+                        parseInt(card.getAttribute('data-mileage')) === car.mileage;
+                });
+
+                if (carCard) {
+                    carCard.style.display = 'inline-block';
+                }
+            });
+        }
+
+        populateModels('');</script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Fairly Reliable Car Sales | Home</title>
+    <link rel="icon" type="image/x-icon" href="assets/FRLogo.jpg" />
+    <style>
+        body {
+            font-family: Arial;
+            background-image: url('assets/CarDealership.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            display: solid;
+        }
+        header {
+            background-color: darkgoldenrod;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 128px;
+            z-index: 999;
+        }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                text-align: center;
+            }
+
+                nav ul li {
+                    display: inline;
+                }
+
+                    nav ul li a {
+                        display: inline-block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 20px;
+                        text-decoration: none;
+                    }
+
+                        nav ul li a:hover {
+                            background-color: #ddd;
+                            color: black;
+                        }
+
+        .content {
+            padding: 20px;
+        }
+
+        header {
+            background-color: goldenrod;
+            text-align: center;
+            font-size: large;
+        }
+
+        .search-bar {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+            .search-bar select, .search-bar input {
+                margin: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+
+            .search-bar button {
+                padding: 10px 20px;
+                background-color: #333;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+                .search-bar button:hover {
+                    background-color: #555;
+                }
+
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+            .container img,
+            .container button,
+            section p div {
+                width: 200px;
+                height: auto;
+                margin: 0 10px;
+            }
+
+            .container button {
+                padding: 10px 20px;
+                background-color: darkgoldenrod;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                text-align: center;
+            }
+
+        section p {
+            border: 2px solid #000;
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+        }
+
+        aside p1 {
+            background-color: goldenrod;
+            float: right;
+            width: 20%;
+            border-left: 1px solid;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .services-info {
+            width: 45%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+            .services-info h2 {
+                margin-top: 0;
+            }
+
+            .services-info ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+            .services-info button {
+                padding: 10px 20px;
+                background-color: darkgoldenrod;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+
+                .services-info button:hover {
+                    background-color: #45a049;
+                }
+
+            .services-info p {
+                border: none;
+                text-align: left;
+            }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fairly Reliable Car Sales</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Aboutpage.html">About</a></li>
+            <li><a href="Cataloguepage.html">Catalogue</a></li>
+            <li><a href="Servicespage.html">Services</a></li>
+            <li><a href="Contactpage.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <p>At Fairly Reliable Car Sales, we pride ourselves on offering a wide selection of quality vehicles at competitive prices. Our team is dedicated to providing exceptional customer service and ensuring you drive away happy.</p>
+        <div class="container">
+            <img src="assets/FinancialImage.jpg" alt="FinancialImage">
+            <button onclick="window.location.href='Aboutpage.html'">Find out more...</button>
+        </div>
+        <div class="search-bar">
+            <form id="car-search-form" action="cataloguepage.html" method="GET">
+                <select id="make" name="make">
+                    <option value="">Select Make</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Tesla">Tesla</option>
+                    <option value="Audi">Audi</option>
+                </select>
+                <select id="model" name="model">
+                    <option value="">Select Model</option>
+                </select>
+                <select id="year" name="year">
+                    <option value="">Select Year</option>
+                </select>
+                <input type="number" id="mileage" name="mileage" placeholder="Enter Mileage">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+    <aside>
+        <div class="container2">
+            <section class="services-info">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of services to keep your vehicle in top condition:</p>
+                <ul>
+                    <li>Finance Options</li>
+                    <li>MOT Servicing</li>
+                    <li>Diagnostics</li>
+                </ul>
+                <button onclick="window.location.href='Servicespage.html'">Learn More About Our Services</button>
+            </section>
+        </div>
+    </aside>
+    <footer>
+        <p>&copy; 2024 Fairly Reliable Car Sales. All rights reserved.</p>
+    </footer>
+    <script>function getQueryParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return {
+                make: urlParams.get('make'),
+                model: urlParams.get('model'),
+                year: urlParams.get('year'),
+                mileage: urlParams.get('mileage')
+            };
+        }
+
+        // Function to filter cars based on the selected parameters
+        function filterCars() {
+            const { make, model, year, mileage } = getQueryParams();
+
+            const filteredCars = cars.filter(car => {
+                const matchesMake = make ? car.make === make : true;
+                const matchesModel = model ? car.model === model : true;
+                const matchesYear = year ? car.year === parseInt(year) : true;
+                const matchesMileage = mileage ? car.mileage <= parseInt(mileage) : true;
+
+                return matchesMake && matchesModel && matchesYear && matchesMileage;
+            });
+
+            displayCars(filteredCars);
+        }
+
+        // Function to display the filtered cars
+        function displayCars(filteredCars) {
+            const carCardsContainer = document.getElementById('carCards');
+            carCardsContainer.innerHTML = ''; // Clear previous content
+
+            if (filteredCars.length === 0) {
+                carCardsContainer.innerHTML = '<p>No cars match the selected filters.</p>';
+                return;
+            }
+
+            filteredCars.forEach(car => {
+                const carCard = document.createElement('div');
+                carCard.classList.add('car-card');
+                carCard.innerHTML = `
+            <h3>${car.make} ${car.model} ${car.year}</h3>
+            <p>Mileage: ${car.mileage} km</p>
+        `;
+                carCardsContainer.appendChild(carCard);
+            });
+        }
+
+        // Call the filter function on page load
+        window.onload = filterCars;
+</script>
+</body>
+</html>
